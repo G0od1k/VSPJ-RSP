@@ -1,0 +1,37 @@
+header {
+    height: 60px;
+    padding: 8px;
+    overflow: hidden;
+    background-color: #eee;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > .logo {
+        height: 100%;
+    }
+
+    > .right > button {
+        background-color: #e00086;
+        color: white;
+
+        min-width: 2rem;
+        line-height: 1rem;
+        padding: 8px;
+        border: 0;
+        border-radius: calc(16px + 1rem);
+    }
+
+    > .logo,
+    .right {
+        min-width: 100px;
+    }
+}
+
+#search {
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: solid 1px black;
+    font-size: 1.2rem;
+}
