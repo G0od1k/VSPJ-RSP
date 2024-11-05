@@ -1,0 +1,33 @@
+.newest {
+    padding: 100px 0;
+    overflow: hidden;
+
+    img {
+        float: left;
+        margin-right: 16px;
+
+        width: 600px;
+        height: 400px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            margin: 4px 0px;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:first-child {
+                color: inherit;
+            }
+
+            &.author + .author::before {
+                content: ", ";
+                color: var(--color);
+            }
+        }
+    }
+}

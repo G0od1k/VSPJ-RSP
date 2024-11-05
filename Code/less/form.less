@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+    > label {
+        max-width: 100%;
+
+        > span {
+            position: relative;
+            z-index: 3;
+
+            display: block;
+            width: fit-content;
+
+            margin-bottom: -0.5rem;
+            margin-left: 0.5rem;
+
+            padding: 0 4px;
+            background-color: var(--background);
+        }
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid var(--input-bd-color);
+        background: var(--background);
+        color: var(--color);
+        min-width: 300px;
+    }
+}
