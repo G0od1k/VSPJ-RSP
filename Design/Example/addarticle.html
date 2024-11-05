@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <img src="../../Graphic/52news.svg" class="logo" />
+            <input id="search" type="search" placeholder="Hledám" />
+            <div class="right">
+                <button hidden>+</button><button>Přihlásit</button>
+            </div>
+        </header>
+        <main class="article">
+            <form action="#">
+                <input type="file" name="file" />
+                <label>
+                    <span>Název</span><input type="text" name="title"
+                /></label>
+                <label> <span>Spoluautoři</span><input type="text" /></label>
+                <label>
+                    <span>Popis</span><textarea name="desc"></textarea>
+                </label>
+                <label>
+                    <span>Vyberte </span>
+                    <select name="" id="">
+                        <option>---</option>
+                        <option value="opt1">Opt 1</option>
+                        <option value="opt2">Opt 2</option>
+                    </select>
+                </label>
+                <input type="submit" value="Odeslat" />
+            </form>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2024 52news.com</p>
+            <p>Uděláno pro ŘSP VŠPJ 2024</p>
+            <a href="#">O nás</a><br />
+            <a href="#">hlavniredaktor@vspj.cz</a>
+        </footer>
+    </body>
+</html>

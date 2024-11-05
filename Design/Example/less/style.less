@@ -5,6 +5,7 @@
 @import "newest";
 @import "article";
 @import "footer";
+@import "form";
 
 body {
     margin: 0;
@@ -48,6 +49,7 @@ a {
 
 main {
     padding: 0px calc(100vw / 2 - 700px);
+    min-height: calc(100vh - 150px - @header_h);
 }
 
 main.article {
