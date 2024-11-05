@@ -20,7 +20,7 @@
             ?>
             <img src="https://placehold.co/600x400/EEE/31343C?font=playfair-display" />
             <h1>
-                <a href="article.html"><?php echo $newest["title"] ?></a>
+                <a href="release.php?id=<?php echo $newest["id"] ?>"><?php echo $newest["title"] ?></a>
             </h1>
             <p>
                 <?php echo $newest["description"] ?>
@@ -56,7 +56,7 @@
                 while ($release = $result->fetch_assoc()) {
                     echo "<article>" .
                         "<img src='https://placehold.co/600x400/EEE/31343C?font=playfair-display&text=Cover' />" .
-                        "<h2>" . $release["title"] . "</h2>" .
+                        "<h2><a href='release.php?id=" . $release["id"] . "'>" . $release["title"] . "</a></h2>" .
                         "</article>";
                 }
             } else {

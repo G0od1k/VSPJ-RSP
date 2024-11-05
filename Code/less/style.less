@@ -33,12 +33,21 @@ button {
 
 a {
     color: var(--accent);
+
+    &.author {
+        text-decoration: none;
+
+        & + &::before {
+            content: ", ";
+            color: var(--color);
+        }
+    }
 }
 
 .allArticles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    main.article > & {
+    main.release > & {
         grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     }
     justify-items: center;
@@ -52,7 +61,7 @@ main {
     min-height: calc(100vh - 150px - @header_h);
 }
 
-main.article {
+main.release {
     .top {
         height: 400px;
         margin: 50px 0px;
