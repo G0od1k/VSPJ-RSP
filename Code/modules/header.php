@@ -1,9 +1,22 @@
+<?php
+session_start();
+?>
+
 <header>
     <a href="index.php" class="logo">
         <img src="./icons/52news.svg" />
     </a>
     <input id="search" type="search" placeholder="Hledám" />
     <div class="right">
-        <button hidden>+</button><button>Přihlásit</button>
+        <?php
+        if (isset($_SESSION['email'])) {
+            include "user.php";
+
+            echo "<button hidden>+</button>";
+            echo "<a href='account.php'><button>" . $user["name"] . "</button></a>";
+        } else {
+            echo "<a href='login.php'><button>Přihlásit</button></a>";
+        }
+        ?>
     </div>
 </header>
