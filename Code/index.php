@@ -18,7 +18,7 @@
             $sql = "SELECT * FROM Release ORDER BY date DESC LIMIT 1";
             $newest = $connect->query($sql)->fetch_assoc();
             ?>
-            <img src="https://placehold.co/600x400/EEE/31343C?font=playfair-display" />
+            <img src="./img/<?php echo $newest["id"] ?>.png" />
             <h1>
                 <a href="release.php?id=<?php echo $newest["id"] ?>"><?php echo $newest["title"] ?></a>
             </h1>
@@ -55,7 +55,7 @@
                 $result->fetch_assoc();
                 while ($release = $result->fetch_assoc()) {
                     echo "<article>" .
-                        "<img src='https://placehold.co/600x400/EEE/31343C?font=playfair-display&text=Cover' />" .
+                        "<img src='./img/" . $release["id"] . ".png' />" .
                         "<h2><a href='release.php?id=" . $release["id"] . "'>" . $release["title"] . "</a></h2>" .
                         "</article>";
                 }

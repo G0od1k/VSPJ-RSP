@@ -17,7 +17,7 @@
         $release = $connect->query($sql)->fetch_assoc();
         ?>
         <div class="top">
-            <img src="https://placehold.co/600x400/EEE/31343C?font=playfair-display" />
+            <img src="./img/<?php echo $release["id"] ?>.png" />
             <h1><?php echo $release["title"] ?></h1>
             <p>
                 <?php echo $release["description"] ?>
