@@ -15,6 +15,7 @@
         <p>Role:
             <?php echo ["Čtenář", "Autor", "Redaktor", "Admin"][$user["role"]] ?>
         </p>
+        <a href="logout.php"><button>Odhlásit</button></a>
     </main>
     <?php include "./modules/footer.php" ?>
 </body>
