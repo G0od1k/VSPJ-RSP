@@ -17,7 +17,7 @@
     }
     ?>
     <main class="article">
-        <form action="#">
+        <form action="add_article_act.php" method="post">
             <input type="file" name="file" />
             <label>
                 <span>Název</span><input type="text" name="title" /></label>
@@ -46,6 +46,11 @@
                 </select>
             </label>
             <input type="submit" value="Odeslat" />
+            <?php if (isset($_GET['error'])) { ?>
+                <p class="error">
+                    <?php echo $_GET['error']; ?>
+                </p>
+            <?php } ?>
         </form>
     </main>
     <?php include "./modules/footer.php" ?>
