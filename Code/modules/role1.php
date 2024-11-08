@@ -1,0 +1,1 @@
+<a href="add_article.php"><button>Nabídnout článek</button></a>
