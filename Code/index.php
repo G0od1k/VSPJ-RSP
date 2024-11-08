@@ -15,7 +15,7 @@
     <main>
         <div class="newest">
             <?php
-            $sql = "SELECT * FROM Release ORDER BY date DESC LIMIT 1";
+            $sql = "SELECT * FROM Release WHERE date < NOW() ORDER BY date DESC LIMIT 1";
             $newest = $connect->query($sql)->fetch_assoc();
             ?>
             <img src="./img/<?php echo $newest["id"] ?>.png" />
@@ -48,7 +48,7 @@
         </div>
         <div class="allArticles">
             <?php
-            $sql = "SELECT * FROM Release ORDER BY date DESC";
+            $sql = "SELECT * FROM Release WHERE date < NOW() ORDER BY date DESC";
             $result = $connect->query($sql);
 
             if ($result->num_rows > 0) {
