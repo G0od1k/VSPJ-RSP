@@ -32,7 +32,11 @@
             echo "<p>" . $review["text"] . "</p>";
         }
 
-        echo "</div></article>";
+        echo "</div>";
+        if ($article["status"] == 2) {
+            echo "<a href='edit_article.php?id=" . $article["id"] . "'><button>Upravit</button></a>";
+        }
+        echo "</article>";
     }
     ?>
 </div>
