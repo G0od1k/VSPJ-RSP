@@ -42,7 +42,7 @@
                     echo "<a href='#' class='author'>" . $author["name"] . "</a>";
                 }
 
-                echo "</span><p>" . $article["description"] . "</p><button>Čist</button>" .
+                echo "</span><p>" . $article["description"] . "</p><a href='article/" . $article["id"] . ".pdf'><button>Čist</button></a>" .
                     "</article>";
             }
             ?>
