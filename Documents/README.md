@@ -14,7 +14,9 @@ Uživatel má role, které znamenají:
 
 0. Čtenář
 1. Autor
-2. Redaktor
-3. Admin
+2. Recenzent
+3. Redaktor
+4. Šéfredaktor
+5. Admin
 
 SQL Script pro vytvoření databáze leží v [dbsetup.sql](dbsetup.sql)

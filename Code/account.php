@@ -13,7 +13,14 @@
     <main>
         <h1><?php echo $user["name"] ?></h1>
         <p>Role:
-            <?php echo ["Čtenář", "Autor", "Redaktor", "Admin"][$user["role"]] ?>
+            <?php echo [
+                "Čtenář",
+                "Autor",
+                "Recenzent",
+                "Redaktor",
+                "Šéfredaktor",
+                "Admin",
+            ][$user["role"]] ?>
         </p>
         <?php include "./modules/role" . $user["role"] . ".php" ?>
         <a href="logout.php"><button>Odhlásit</button></a>
