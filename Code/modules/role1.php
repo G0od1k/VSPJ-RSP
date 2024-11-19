@@ -8,13 +8,19 @@
         FROM Article
         JOIN WrittenBy ON Article.id = WrittenBy.id_article
         JOIN User ON WrittenBy.id_user = User.id
-        WHERE (Article.status = 1 OR Article.status = 2) 
+        WHERE (Article.status = 2 OR Article.status = 3)
         AND User.id = " . $user["id"];
 
     $result = $connect->query($sql);
 
     while ($article = $result->fetch_assoc()) {
-        echo "<article>" .
+        echo "<article><div class='art_header'>Status: <strong>" . [
+            "Odmítnuto",
+            "Archivováno",
+            "Čeká na schválení",
+            "Vyžaduje úpravy",
+            "Schváleno",
+        ][$article["status"]] . "</strong></div>" .
             "<h3 href='#'>" . $article["title"] . "</h3>" .
             "<span>Authors: ";
 
@@ -49,7 +55,7 @@
         FROM Article
         JOIN WrittenBy ON Article.id = WrittenBy.id_article
         JOIN User ON WrittenBy.id_user = User.id
-        WHERE Article.status = 3
+        WHERE Article.status = 4
         AND User.id = " . $user["id"];
 
     $result = $connect->query($sql);
