@@ -20,6 +20,7 @@
             "Čeká na schválení",
             "Vyžaduje úpravy",
             "Schváleno",
+            "Čeká na vydání",
         ][$article["status"]] . "</strong></div>";
         "<h3 href='#'>" . $article["title"] . "</h3>";
 
@@ -50,8 +51,8 @@
         FROM Article
         JOIN WrittenBy ON Article.id = WrittenBy.id_article
         JOIN User ON WrittenBy.id_user = User.id
-        AND User.id = " . $user["id"];
         WHERE Article.status = 5
+        AND User.id = " . $user["id"];
 
     $result = $connect->query($sql);
 

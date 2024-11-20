@@ -25,8 +25,8 @@
             FROM Article
             JOIN WrittenBy ON Article.id = WrittenBy.id_article
             JOIN User ON WrittenBy.id_user = User.id
-            AND User.id = " . $user["id"];
             WHERE Article.status = 5
+            AND User.id = " . $user["id"];
 
             $result = $connect->query($sql);
 
