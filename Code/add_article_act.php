@@ -6,6 +6,11 @@ include "user.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_SESSION['email'])) {
 
+    if ($user["role"] != 1) {
+        header("Location: account.php");
+        exit();
+    }
+
     if (isset($_POST['release']) && $_POST['release'] !== '---') {
 
         $title = $connect->real_escape_string($_POST['title']);
