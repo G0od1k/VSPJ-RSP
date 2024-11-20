@@ -34,7 +34,7 @@
         }
 
         echo "</div>";
-        if ($article["status"] == 2) {
+        if ($article["status"] == 3) {
             echo "<a href='edit_article.php?id=" . $article["id"] . "'><button>Upravit</button></a>";
         }
         echo "</article>";
