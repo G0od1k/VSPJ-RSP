@@ -50,8 +50,8 @@
         FROM Article
         JOIN WrittenBy ON Article.id = WrittenBy.id_article
         JOIN User ON WrittenBy.id_user = User.id
-        WHERE Article.status = 4
         AND User.id = " . $user["id"];
+        WHERE Article.status = 5
 
     $result = $connect->query($sql);
 
