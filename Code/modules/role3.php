@@ -33,4 +33,24 @@
         echo "</article>";
     }
     ?>
+
+    <?php
+    $sql = "SELECT * FROM Article WHERE status = 3";
+
+    $result = $connect->query($sql);
+
+    while ($article = $result->fetch_assoc()) {
+        echo "<article>";
+
+        include "./modules/article_prepare.php";
+
+        echo "<hr>";
+
+        $id = $article["id"];
+
+        include "./modules/add_review.php";
+
+        echo "</article>";
+    }
+    ?>
 </div>
