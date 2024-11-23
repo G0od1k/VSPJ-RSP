@@ -32,7 +32,7 @@
                 <select name="release">
                     <option>---</option>
                     <?php
-                    $sql = "SELECT * FROM RSP_Release WHERE date > NOW()";
+                    $sql = "SELECT * FROM Release WHERE date > NOW()";
                     $result = $connect->query($sql);
 
                     if ($result->num_rows > 0) {
