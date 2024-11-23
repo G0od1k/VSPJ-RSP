@@ -14,27 +14,10 @@
     $result = $connect->query($sql);
 
     while ($article = $result->fetch_assoc()) {
-        echo "<article><div class='art_header'>Status: <strong>" . [
-            "Odmítnuto",
-            "Archivováno",
-            "Čeká na schválení",
-            "Vyžaduje úpravy",
-            "Schváleno",
-            "Čeká na vydání",
-        ][$article["status"]] . "</strong></div>";
-        "<h3 href='#'>" . $article["title"] . "</h3>";
+        echo "<article>";
 
-        include "./modules/article.php";
+        include "./modules/article_prepare.php";
 
-        echo "<div class='reviews'>";
-
-        $reviews_sql = "SELECT * FROM `Review` WHERE id_article = " . $article["id"];
-        $reviews_result = $connect->query($reviews_sql);
-        while ($review = $reviews_result->fetch_assoc()) {
-            echo "<p>" . $review["text"] . "</p>";
-        }
-
-        echo "</div>";
         if ($article["status"] == 3) {
             echo "<a href='edit_article.php?id=" . $article["id"] . "'><button>Upravit</button></a>";
         }

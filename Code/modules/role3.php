@@ -12,7 +12,9 @@
 
     while ($article = $result->fetch_assoc()) {
         echo "<article>";
-        include "./modules/article.php";
+
+        include "./modules/article_prepare.php";
+
         echo "<hr><form method='POST' action='set_reviewer_act.php'><input type='hidden' name='aid' value='" . $article["id"] . "'><select name='uid'>";
 
         $sql = "SELECT u.id, u.name, COUNT(rb.id_article) AS article_count
