@@ -35,7 +35,7 @@
     ?>
 
     <?php
-    $sql = "SELECT * FROM Article WHERE status = 3";
+    $sql = "SELECT * FROM Article WHERE status = 3 OR status = 2";
 
     $result = $connect->query($sql);
 
