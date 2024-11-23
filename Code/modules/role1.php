@@ -4,12 +4,25 @@
 
 <div class="allArticles">
     <?php
-    $sql = "SELECT Article.id, Article.title, Article.description, Article.date, Article.status
-        FROM Article
-        JOIN WrittenBy ON Article.id = WrittenBy.id_article
-        JOIN User ON WrittenBy.id_user = User.id
-        WHERE (Article.status = 2 OR Article.status = 3)
-        AND User.id = " . $user["id"];
+    $sql = "SELECT
+            a.id,
+            a.title,
+            a.description,
+            a.date,
+            a.status,
+            r.id AS release_id,
+            r.title AS release_title,
+            r.date AS release_date
+        FROM
+            Article a
+        JOIN
+            Release r ON a.id_release = r.id
+        JOIN
+            WrittenBy wb ON a.id = wb.id_article
+        WHERE
+            wb.id_user = " . $user["id"] . "
+            AND r.date > NOW();
+    ";
 
     $result = $connect->query($sql);
 
