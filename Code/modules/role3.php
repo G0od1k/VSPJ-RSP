@@ -48,6 +48,7 @@
 
         $id = $article["id"];
 
+        echo "<a href='archive_article_act.php?id=" . $id . "'><button>Archivovat</button></a>";
         echo "<a href='approve_article_act.php?id=" . $id . "'><button>Schválit</button></a>";
 
         include "./modules/add_review.php";
