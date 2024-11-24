@@ -44,7 +44,6 @@ CREATE TABLE Review (
     id_article INT,
     text TEXT,
     datetime DATETIME,
-    PRIMARY KEY (id_user, id_article),
     FOREIGN KEY (id_user) REFERENCES User(id),
     FOREIGN KEY (id_article) REFERENCES Article(id)
 );
