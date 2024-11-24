@@ -40,3 +40,25 @@ V závislosti na vaší roli máte k dispozici různé funkce:
 ## Stránka autora
 
 Kliknutím na jméno autora se dostanete na jeho profil. Na této stránce můžete vidět všechny články, které autor publikoval.
+
+## Role a účty
+
+### **Autor**
+
+- **Jméno**: Bob Smith
+- **E-mail**: bob.smith@example.com
+- **Heslo**: 123
+
+### **Admin**
+
+- **Jméno**: Admin Novák
+- **E-mail**: admin@vspj.cz
+- **Heslo**: password
+
+### **Redaktor**
+
+- **Jméno**: Peljmeška
+- **E-mail**: peljmeni@gmail.com
+- **Heslo**: pel
+
+  
