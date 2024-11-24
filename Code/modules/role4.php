@@ -15,7 +15,10 @@
 
         $id = $article["id"];
 
+        echo "<a href='archive_article_act.php?id=" . $id . "'><button>Archivovat</button></a>";
         echo "<a href='release_article_act.php?id=" . $id . "'><button>Přidat do vydáni</button></a>";
+
+        include "./modules/add_review.php";
 
         echo "</article>";
     }
@@ -34,6 +37,15 @@
         echo "<article>";
 
         include "./modules/article_prepare.php";
+
+        echo "<hr>";
+
+        $id = $article["id"];
+
+        echo "<a href='archive_article_act.php?id=" . $id . "'><button>Archivovat</button></a>";
+        echo "<a href='approve_article_act.php?id=" . $id . "'><button>Schválit</button></a>";
+
+        include "./modules/add_review.php";
 
         echo "</article>";
     }
