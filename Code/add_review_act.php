@@ -11,6 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_SESSION['email'])) {
 
     $sql = "INSERT INTO `Review` (`id_user`, `id_article`, `text`) VALUES ('" . $user_id . "','" . $id . "','" . $text . "')";
     $connect->query($sql);
+
+    if ($user["role"] == 2) {
+        $sql = "UPDATE Article SET status = 3 WHERE id = " . $id;
+        $connect->query($sql);
+    }
 }
 
 header("Location: account.php");
