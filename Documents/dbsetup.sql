@@ -43,7 +43,7 @@ CREATE TABLE Review (
     id_user INT,
     id_article INT,
     text TEXT,
-    datetime DATETIME,
+    datetime DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_user) REFERENCES User(id),
     FOREIGN KEY (id_article) REFERENCES Article(id)
 );
