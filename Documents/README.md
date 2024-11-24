@@ -2,6 +2,8 @@
 
 Tato složka obsahuje dokumenty projektů.
 
+[Uživatelská dokumentace k webové aplikaci](user_doc.md)
+
 # Obchodní model
 
 ![alt text](<Canvas Business Model.png>)
