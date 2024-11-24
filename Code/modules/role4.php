@@ -11,6 +11,12 @@
 
         include "./modules/article_prepare.php";
 
+        echo "<hr>";
+
+        $id = $article["id"];
+
+        echo "<a href='release_article_act.php?id=" . $id . "'><button>Přidat do vydáni</button></a>";
+
         echo "</article>";
     }
     ?>
