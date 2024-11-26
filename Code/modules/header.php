@@ -12,10 +12,9 @@ session_start();
         if (isset($_SESSION['email'])) {
             include "user.php";
 
-            echo "<button hidden>+</button>";
             echo "<a href='account.php'><button>" . $user["name"] . "</button></a>";
         } else {
-            echo "<a href='login.php'><button>Přihlásit</button></a>";
+            echo "<a href='login.php'><button>Přihlásit se</button></a>";
         }
         ?>
     </div>
