@@ -1,13 +1,8 @@
 <?php
 
-echo "<div class='art_header'>Status: <strong>" . [
-    "Odmítnuto", # 0
-    "Archivováno", # 1
-    "Čeká na recenze", # 2
-    "Vyžaduje úpravy", # 3
-    "Schváleno", # 4
-    "Čeká na vydání", # 5
-][$article["status"]] . "</strong></div>";
+include "vars.php";
+
+echo "<div class='art_header'>Status: <strong>" . $statuses[$article["status"]] . "</strong></div>";
 
 include "./modules/article.php";
 
