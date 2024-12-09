@@ -8,6 +8,8 @@ session_start();
     </a>
     <input id="search" type="search" placeholder="Hledám" />
     <div class="right">
+        <a href="faq.php"><button>FAQ</button></a>
+
         <?php
         if (isset($_SESSION['email'])) {
             include "user.php";
