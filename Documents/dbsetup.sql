@@ -53,5 +53,5 @@ CREATE TABLE GlobalComments (
     id_user INT NOT NULL,
     text TEXT NOT NULL,
     datetime DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_user) REFERENCES RSP_User(id)
+    FOREIGN KEY (id_user) REFERENCES User(id)
 );
