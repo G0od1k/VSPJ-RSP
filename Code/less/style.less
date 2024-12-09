@@ -8,6 +8,7 @@
 @import "form";
 @import "reviews";
 @import "about";
+@import "user";
 
 body {
     margin: 0;
@@ -90,4 +91,8 @@ main.release {
 p {
     text-align: justify;
     line-height: 1.5;
+}
+
+main.article:has(form) > h1 {
+    text-align: center;
 }
