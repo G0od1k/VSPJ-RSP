@@ -1,3 +1,8 @@
+<?php
+include "./vars.php";
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +56,16 @@
                 <span>Nahradit soubor:</span>
                 <input type="file" name="file">
             </label>
+            <?php
+            if ($user['role'] == 5) {
+                echo "<select name='status'>";
+                for ($i = 0; $i < count($statuses); $i++) {
+                    echo "<option value='" . $i . "'" . ($i == $article['status'] ? "selected" : "") . ">" . $statuses[$i] . "</option>";
+                }
+                echo "<input type='submit' />";
+                echo "</select>";
+            }
+            ?>
             <input type="submit" value="Aktualizovat článek">
             <?php if (isset($_GET['error'])) { ?>
                 <p class="error"><?php echo $_GET['error']; ?></p>

@@ -9,8 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_SESSION['email'])) {
 
     $title = $connect->real_escape_string($_POST['title']);
     $desc = $connect->real_escape_string($_POST['desc']);
+    $status = ($_POST['status'] ? $_POST['status'] : 2);
 
-    $sql = "UPDATE Article SET `title` = '$title', `description` = '$desc', `status` = 2 WHERE id = $articleId";
+    $sql = "UPDATE Article SET `title` = '$title', `description` = '$desc', `status` = $status WHERE id = $articleId";
 
     if ($connect->query($sql) === TRUE) {
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
