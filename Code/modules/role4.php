@@ -1,3 +1,5 @@
+<a href="create_release.php"><button>Vytvořit vydání</button></a>
+
 <h2>Schválení Články</h2>
 
 <div class="allArticles">
