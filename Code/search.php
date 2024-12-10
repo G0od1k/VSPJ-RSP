@@ -15,7 +15,7 @@
     <main>
         <div class="allArticles">
             <?php
-            $sql = "SELECT *
+            $sql = "SELECT a.*
             FROM Article AS a
             JOIN Release AS r ON a.id_release = r.id
             WHERE (a.title LIKE '%" . $_GET['q'] . "%'
